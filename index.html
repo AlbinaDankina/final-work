@@ -9,12 +9,12 @@
 
     <link href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet">
 
-
 <link href="style.css" rel="stylesheet"></head>
 <body>
 <a id="returnback" href="#"></a>
 <a id="returnback-2" href="#"></a>
 <a id="returnback-3" href="#"></a>
+<div class="overlay"></div>
 
 <div class="body-wrapper">
     <div class="body-intro">
@@ -37,12 +37,12 @@
                     </div>
                     <div class="empty"></div>
                     <div class="upper-menu--hidden"></div>
-                    <div class="upper-menu__item upper-menu__item--hidden">
+                    <div class="icon-call upper-menu__item upper-menu__item--hidden">
                         <a href="#popup-2">
                             <img src="img/call.png" alt="">
                         </a>
                     </div>
-                    <div class="upper-menu__item upper-menu__item--hidden">
+                    <div class="icon-message upper-menu__item upper-menu__item--hidden">
                         <a href="#popup">
                             <img src="img/chat.png" alt="">
                         </a>
@@ -257,30 +257,34 @@
                     </div>
 
                     <div id="read" class="more">
-                        <div class="alternative-wrapper__block alternative-wrapper__block_hidden">
-                            <div class="alternative-slide">
-                                <img src="img/acer.svg" alt="#">
-                            </div>
-                            <div class="alternative-slide">
-                                <img src="img/samsung.svg" alt="#">
-                            </div>
-                            <div class="alternative-slide">
-                                <img src="img/viewsonic.svg" alt="#">
-                            </div>
-                        </div>
-
-                        <div class="alternative-wrapper__block">
-                            <a href="#" class="alternative-slide alternative-slide_hidden">
-                                <img src="img/lenovo.svg" alt="#">
-                            </a>
-                            <a href="#" class="alternative-slide">
-                                <img src="img/samsung.svg" alt="#">
-                            </a>
-
-                            <a href="#" class="alternative-slide">
-                                <img src="img/apple.svg" alt="#">
-                            </a>
-                        </div>
+                      <div class="alternative-wrapper__block">
+                        <a href="#" class="alternative-slide">
+                          <img src="img/lenovo.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide">
+                          <img src="img/samsung.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide">
+                          <img src="img/apple.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide alternative-slide_hidden">
+                          <img src="img/viewsonic.svg" alt="#">
+                        </a>
+                      </div>
+                      <div class="alternative-wrapper__block">
+                        <a href="#" class="alternative-slide">
+                          <img src="img/bosch.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide">
+                          <img src="img/hp.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide">
+                          <img src="img/acer.svg" alt="#">
+                        </a>
+                        <a href="#" class="alternative-slide alternative-slide_hidden">
+                          <img src="img/sony.svg" alt="#">
+                        </a>
+                      </div>
                     </div>
                 </div>
 
@@ -405,6 +409,11 @@
                                     <img src="img/Screen-Repair.svg" alt="Screen-repair-icon">
                                 </a>
                             </li>
+                          <li class="alternative-section-one__item">
+                            <a>
+                              <img src="img/Screen-Repair.svg" alt="Screen-repair-icon">
+                            </a>
+                          </li>
                         </ul>
                     </div>
                 </div>
@@ -470,20 +479,44 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="alternative-section-one__block alternative-section-one__block--hidden">
-                        <ul class="alternative-section-one__list">
-                            <li class="alternative-section-one__item">
-                                <a>
-                                    <img src="img/PC-Repair.svg" alt="PC-repair-icon">
-                                </a>
-                            </li>
-                            <li class="alternative-section-one__item">
-                                <a>
-                                    <img src="img/Screen-Repair.svg" alt="Screen-repair-icon">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                  <div class="alternative-section-one__block">
+                    <ul class="alternative-section-one__list">
+                      <li class="alternative-section-one__item">
+                        <a>
+                          <img src="img/Screen-Repair.svg" alt="Screen-repair-icon">
+                        </a>
+                      </li>
+                      <li class="alternative-section-one__item">
+                        <a>
+                          <img src="img/PC-Repair.svg" alt="PC-repair-icon">
+                        </a>
+                      </li>
+                      <li class="alternative-section-one__item">
+                        <a>
+                          <img src="img/Laptop-Repair.svg" alt="laptop-repair-icon">
+                        </a>
+                      </li>
+                      <li class="alternative-section-one__item">
+                        <a>
+                          <img src="img/Tablet-Repair.svg" alt="tablet-repair-icon">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
                 <div class="container-btn">
                     <img class="btn__icon--desktop-size" src="img/show-icon.svg" alt="">
@@ -719,12 +752,13 @@
                 </div>
             </div>
         </footer>
+
         <div id="popup" class="popup">
-            <a href="#returnback" class="area"></a>
+            <a href="#returnback" class="area" id="area"></a>
             <div class="popup__body">
                 <div class="popup__content">
                     <header class="feedback popup__close">
-                        <a href="#" class="close-btn" tabindex="8">
+                        <a id="closeone" href="#" class="close-btn" tabindex="8">
                             <img src="img/close.svg" alt="close-button">
                         </a>
                     </header>
@@ -757,12 +791,13 @@
             </div>
 
         </div>
-        <div id="popup-2" class="popup">
-            <a href="#returnback-2" class="area"></a>
+        <div id="popup-2" class="popup popup-2">
+
+            <a href="#returnback-2" class="area" id="areatwo"></a>
             <div class="popup__body">
                 <div class="popup__content">
                     <header class="feedback popup__close">
-                        <a href="#" type="submit" class="btn close-btn" tabindex="5">
+                        <a id="closetwo" href="#" type="submit" class="btn close-btn popup-2__close-btn" tabindex="5">
                             <img src="img/close.svg" alt="close-button">
                         </a>
                     </header>
@@ -830,12 +865,12 @@
             <footer class="aside-footer">
                 <div class="aside-footer__wrapper">
                     <div class="socials">
-                        <div class="social social__call icon">
+                        <div id="call" class="social social__call icon icon-call">
                             <a href="#popup-2">
                                 <img src="img/call.png" alt="call">
                             </a>
                         </div>
-                        <div class="social social__message icon">
+                        <div id="message" class="social social__message icon icon-message">
                             <a href="#popup">
                                 <img src="img/chat.png" alt="message">
                             </a>
@@ -862,6 +897,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <script type="text/javascript" src="./js/bundle.js"></script></body>
